@@ -12,15 +12,17 @@ How to use this image
 
 ```
 docker run --rm codecentric/terraform:0.7.0 [--version] [--help] <command> [<args>]
-docker run -e TERRAFORM_BUCKET=codecentric \
+
+docker run -e TERRAFORM_BUCKET=big-data-muc \
            -e TERRAFORM_STATE_FILE=big-data-group-dcos-cluster.tfstate \
+           -e TERRAFORM_STATE_REGION=eu-central-1 \
            -e AWS_ACCESS_KEY_FILE=/access_key \
            -e AWS_SECRET_KEY_FILE=/secret_key \
            -v ~/.aws/AWS_ACCESS_KEY:/access_key \
            -v ~/.aws/AWS_SECRET_ACCESS_KEY:/secret_key \
-           -v ~/development/busfloatingdata/terraform:/project \
+           -v ~/development/muc-big-data/Big-Data-Group-DCOS-Cluster:/project \
            -w /project \
-           codecentric/terraform:0.7.0 apply
+           codecentric/terraform:0.7.1 apply
 ```
 
 ## Using

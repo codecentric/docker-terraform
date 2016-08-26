@@ -1,5 +1,8 @@
 #!/bin/bash
 
+echo "**************************************************";
+echo "Remove remote state .terraform"
+echo "**************************************************";
 rm -rf .terraform
 
 AWS_ACCESS_KEY_VAR=`cat $AWS_ACCESS_KEY_FILE`
