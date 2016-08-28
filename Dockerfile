@@ -1,7 +1,6 @@
-FROM ruby:2.2
+FROM hashicorp/terraform:0.7.1
 MAINTAINER "codecentric"
 
-RUN gem install slackcat
 COPY docker-entrypoint.sh /
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
