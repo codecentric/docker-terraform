@@ -11,7 +11,7 @@ https://www.terraform.io/
 How to use this image
 
 ```
-docker run --rm codecentric/terraform:0.7.0 [--version] [--help] <command> [<args>]
+docker run --rm codecentric/terraform:0.7.2 [--version] [--help] <command> [<args>]
 
 docker run -e TERRAFORM_BUCKET=big-data-muc \
            -e TERRAFORM_STATE_FILE=big-data-group-dcos-cluster.tfstate \
@@ -22,7 +22,7 @@ docker run -e TERRAFORM_BUCKET=big-data-muc \
            -v ~/.aws/AWS_SECRET_ACCESS_KEY:/secret_key \
            -v ~/development/muc-big-data/Big-Data-Group-DCOS-Cluster:/project \
            -w /project \
-           codecentric/terraform:0.7.1 apply
+           codecentric/terraform:0.7.2 apply
 ```
 
 ## Using

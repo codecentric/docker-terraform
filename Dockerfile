@@ -1,4 +1,4 @@
-FROM hashicorp/terraform:0.7.1
+FROM hashicorp/terraform:0.7.2
 MAINTAINER "codecentric"
 
 COPY docker-entrypoint.sh /
